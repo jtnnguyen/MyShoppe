@@ -14,6 +14,7 @@ namespace UITest1
             {
                 return ConfigureApp
                     .Android
+                    
                     .StartApp();
             }
 
