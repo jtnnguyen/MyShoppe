@@ -9,6 +9,7 @@ using Android.Widget;
 using Android.OS;
 using ImageCircle.Forms.Plugin.Droid;
 using Android.Graphics.Drawables;
+using Microsoft.Azure.Mobile;
 using Xamarin.Forms.Platform.Android;
 
 namespace MyShop.Droid
@@ -18,6 +19,7 @@ namespace MyShop.Droid
     {
 		protected override void OnCreate (Bundle bundle)
 		{
+            MobileCenter.Configure("da6bcf42-3100-4df2-955f-4fcbce4bf6df");
 
             FormsAppCompatActivity.ToolbarResource = Resource.Layout.toolbar;
             FormsAppCompatActivity.TabLayoutResource = Resource.Layout.tabs;

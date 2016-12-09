@@ -1,5 +1,7 @@
 ﻿using System;
-
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 using Xamarin.Forms;
 
 namespace MyShop
@@ -8,8 +10,10 @@ namespace MyShop
 	{
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new NavigationPage(new HomePage())
+
+            MobileCenter.Start(typeof(Analytics), typeof(Crashes));
+            // The root page of your application
+            MainPage = new NavigationPage(new HomePage())
 			{
 				BarTextColor = Color.White,
                 BarBackgroundColor = Color.FromHex("#2B84D3")
